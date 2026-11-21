@@ -8,7 +8,7 @@
 
 **服务器目前处于筹备阶段。地址、开放时间及官方社区入口以官网后续公布为准；页面中的玩法规划不代表已经上线。**
 
-[访问官网](https://zxwusheng.github.io/) · [团队介绍](https://zxwusheng.github.io/jieshao.html) · [协作者招募](https://zxwusheng.github.io/ztdh.html) · [赞助支持](https://zxwusheng.github.io/scene1.html)
+[访问官网](https://zxwusheng.github.io/WS-OA/) · [团队介绍](https://zxwusheng.github.io/WS-OA/jieshao.html) · [协作者招募](https://zxwusheng.github.io/WS-OA/ztdh.html) · [赞助支持](https://zxwusheng.github.io/WS-OA/scene1.html)
 
 ## 网站功能
 
@@ -24,10 +24,10 @@
 
 | 文件 | 内容 |
 | --- | --- |
-| `index.html` | 首页、玩法介绍、筹备动态与加入入口 |
-| `jieshao.html` | 团队成员、职责与项目介绍 |
-| `ztdh.html` | 协作者岗位、报名流程与既有联系方式 |
-| `scene1.html` | 赞助说明、支付宝及微信收款码 |
+| [index.html](https://zxwusheng.github.io/WS-OA/) | 首页、玩法介绍、筹备动态与加入入口 |
+| [jieshao.html](https://zxwusheng.github.io/WS-OA/jieshao.html) | 团队成员、职责与项目介绍 |
+| [ztdh.html](https://zxwusheng.github.io/WS-OA/ztdh.html) | 协作者岗位、报名流程与既有联系方式 |
+| [scene1.html](https://zxwusheng.github.io/WS-OA/scene1.html) | 赞助说明、支付宝及微信收款码 |
 
 当前发布以上四个主页面、网站资源及本说明。测试产物、检查工具、本机配置和旧预览不随正式站点上传。
 
@@ -39,7 +39,7 @@ py -m http.server 8000 --bind 127.0.0.1
 
 如果环境没有 `py`，可使用 `python` 或本机 Python 可执行文件路径。通过 HTTP 检查页面跳转、地址参数、图片和主题保存。
 
-当前 GitHub Pages 发布源为 `main` 分支的 `/ (root)` 目录，入口为 `index.html`。保留根目录的 `.nojekyll`，让 HTML、CSS、JavaScript 和图片直接作为静态文件发布。`sitemap.xml`、`robots.txt` 及各页 canonical/Open Graph 信息使用 `https://zxwusheng.github.io/`；站点域名变化时需要同步更新。更新后检查 Pages 部署任务是否成功，本地提交或推送成功不等于部署成功。
+当前 GitHub Pages 发布源为 `main` 分支的 `/ (root)` 目录，入口为 `index.html`，发布地址为 `https://zxwusheng.github.io/WS-OA/`。保留根目录的 `.nojekyll`，让 HTML、CSS、JavaScript 和图片直接作为静态文件发布。`sitemap.xml`、`robots.txt` 及各页 canonical/Open Graph 信息仍使用旧的根路径，需要同步更新为当前发布地址。更新后检查 Pages 部署任务是否成功，本地提交或推送成功不等于部署成功。
 
 ## 内容配置
 
@@ -133,6 +133,6 @@ Get-FileHash -LiteralPath assets/payments/alipay.png,assets/payments/wechat.png 
 
 **修改后线上仍是旧页面**：先检查 Pages 部署任务，再强制刷新浏览器，核对当前页面与 `main` 中的文件。
 
-**希望参与协作**：阅读[协作者招募页](https://zxwusheng.github.io/ztdh.html)，按页面流程整理方向、能力与可选作品，再通过该页公布的联系方式沟通。
+**希望参与协作**：阅读[协作者招募页](https://zxwusheng.github.io/WS-OA/ztdh.html)，按页面流程整理方向、能力与可选作品，再通过该页公布的联系方式沟通。
 
 本项目与 Mojang / Microsoft 无官方关联。
