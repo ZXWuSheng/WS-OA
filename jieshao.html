@@ -5,14 +5,15 @@
   <script src="site-theme.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>团队介绍｜无声无息:Once Again</title>
-<meta name="description" content="认识无声无息:Once Again 的四位团队成员，了解项目策划、模组移植、核心开发和团队协作职责。">
+<meta name="description" content="认识无声无息:Once Again 的团队。我们因为热爱《我的世界》聚在一起，策划、开发和测试自己的服务器。">
 <script id="oa-avatar-fallback">
 (() => {
   const cachedAvatars = {
     ZX_Wu_Sheng: 'assets/avatars/ZX_Wu_Sheng.png',
     Badnng: 'assets/avatars/Badnng.png',
     KsqsnK: 'assets/avatars/KsqsnK.png',
-    Wangmeili: 'assets/avatars/Wangmeili.png'
+    Wangmeili: 'assets/avatars/Wangmeili.png',
+    Haee_cn: 'assets/avatars/Haee_cn.png'
   };
 
   function remoteAvatar(mcid, size) {
@@ -198,8 +199,9 @@ html[data-theme="light"] .theme-btn .moon{opacity:1;transform:scale(1) rotate(0)
 .member-card:hover::before{transform:scale(1.18)}
 .member-card.active{border-color:color-mix(in srgb,var(--member) 65%,transparent);box-shadow:0 0 0 1px color-mix(in srgb,var(--member) 15%,transparent),0 25px 70px rgba(0,0,0,.20)}
 .member-card.badnng{--member:#59a9ff}.member-card.ksq{--member:#c98cff}.member-card.wang{--member:#ffcf66}
-.card-top{display:flex;justify-content:space-between;gap:20px;align-items:flex-start}
-.member-number{font:900 13px/1 ui-monospace,SFMono-Regular,Consolas,monospace;color:var(--member);letter-spacing:.13em}
+.member-card.haee{--member:#58d5c8}
+html[data-theme="light"] .member-card.haee{--member:#1c7069}
+.card-top{display:flex;align-items:flex-start}
 .head-wrap{width:92px;height:92px;border-radius:24px;padding:6px;border:1px solid color-mix(in srgb,var(--member) 35%,transparent);background:rgba(255,255,255,.035);position:relative;box-shadow:0 14px 32px rgba(0,0,0,.15)}
 .head-wrap img{width:100%;height:100%;object-fit:cover;border-radius:18px;image-rendering:pixelated;position:relative;z-index:2}
 .head-fallback{position:absolute;inset:6px;border-radius:18px;display:grid;place-items:center;background:linear-gradient(135deg,var(--member),color-mix(in srgb,var(--member) 30%,#07130f));color:#fff;font-weight:950}
@@ -224,14 +226,13 @@ html[data-theme="light"] .theme-btn .moon{opacity:1;transform:scale(1) rotate(0)
 .profile-stat{min-width:150px}.profile-stat small{display:block;color:var(--soft);font-size:11px;font-weight:900;letter-spacing:.1em}.profile-stat b{display:block;margin-top:5px;font-size:15px}
 .story-wrap{display:grid;grid-template-columns:.8fr 1.2fr;gap:40px;align-items:start}
 .story-index{position:sticky;top:110px;padding:28px;border:1px solid var(--line);border-radius:26px;background:var(--panel);backdrop-filter:blur(12px)}
-.story-index .big{font-size:clamp(62px,9vw,112px);font-weight:950;color:var(--primary);line-height:.85;letter-spacing:-.07em}
+.story-index .big{margin:0;font-size:clamp(32px,5vw,62px);font-weight:950;color:var(--text);line-height:1.12}
 .story-index p{margin:18px 0 0;color:var(--muted);line-height:1.8}
 .story-card{padding:34px;border:1px solid var(--line);border-radius:28px;background:var(--panel);box-shadow:0 16px 44px rgba(0,0,0,.10)}
 .story-card + .story-card{margin-top:16px}
 .story-card h3{margin:0 0 12px;font-size:28px}.story-card p{margin:0;color:var(--muted);line-height:1.9;font-size:17px}
 .story-card strong{color:var(--text)}
 .finale{text-align:center;padding:110px 0 120px}
-.finale .micro{color:var(--primary);font-weight:950;letter-spacing:.18em;font-size:12px}
 .finale h2{margin:18px auto 20px;max-width:900px;font-size:clamp(43px,7.3vw,92px);line-height:.98;letter-spacing:-.055em}
 .finale h2 span{color:var(--primary)}
 .finale p{max-width:650px;margin:auto;color:var(--muted);font-size:17px;line-height:1.9}
@@ -315,19 +316,50 @@ html[data-theme="light"] .theme-btn .moon{opacity:1;transform:scale(1) rotate(0)
 .team-orbit.player-list-panel::before,.team-orbit.player-list-panel::after,.orbit-glow,.core{display:none}
 .player-list-head{display:flex;width:100%;align-items:center;gap:9px;padding:14px 16px 12px;border-bottom:2px solid var(--line);background:var(--panel-strong);font:900 17px/1 ui-monospace,SFMono-Regular,Consolas,monospace}
 .server-dot{width:11px;height:11px;background:var(--primary);border:2px solid color-mix(in srgb,var(--primary) 45%,#000);box-shadow:2px 2px 0 rgba(0,0,0,.3)}
-.player-count{display:flex;align-items:center;margin-left:auto;color:var(--soft);font-size:11px}
-.player-count::before{content:"";width:4px;height:4px;margin-right:18px;background:var(--primary);box-shadow:5px -3px 0 var(--primary),10px -6px 0 var(--primary),15px -9px 0 var(--primary)}
 .player-list-motd{width:100%;padding:9px 16px 10px;border-bottom:1px solid var(--line);background:color-mix(in srgb,var(--panel) 82%,var(--panel-strong));color:var(--muted);font:700 12px/1.4 ui-monospace,SFMono-Regular,Consolas,monospace}
-.player-list-rows{display:grid;width:100%;grid-template-columns:repeat(2,minmax(0,1fr));gap:1px;background:var(--line)}
-.team-orbit .orbit-person{position:relative;left:auto;top:auto;width:auto;height:84px;display:grid;grid-template-columns:52px minmax(0,1fr);align-items:center;gap:10px;padding:10px 11px;border:0;border-radius:0;background:var(--control);box-shadow:none;transform:none;transition:background .12s steps(2),box-shadow .12s steps(2);animation:none!important;overflow:hidden}
+.player-list-rows{
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:center;
+  gap:6px;
+  padding:8px;
+}
+.team-orbit .orbit-person{
+  position:relative;
+  left:auto;
+  top:auto;
+  flex:0 0 calc((100% - 12px) / 3);
+  min-width:0;
+  width:auto;
+  height:auto;
+  min-height:116px;
+  display:grid;
+  grid-template-columns:minmax(0,1fr);
+  align-content:center;
+  justify-items:center;
+  gap:6px;
+  padding:18px 5px 9px;
+  border:1px solid var(--line);
+  border-radius:0;
+  background:var(--control);
+  box-shadow:none;
+  text-align:center;
+  transform:none;
+  transition:background .12s steps(2),box-shadow .12s steps(2);
+  animation:none!important;
+  overflow:hidden;
+}
 .team-orbit .orbit-person::before{content:"";display:block;position:absolute;inset:0 auto 0 0;width:3px;border-radius:0;background:var(--person);z-index:4;pointer-events:none}
 .team-orbit .orbit-person::after{display:none}
 .team-orbit .orbit-person:hover,.team-orbit .orbit-person:focus-visible{transform:none;border-color:transparent;background:color-mix(in srgb,var(--control) 86%,var(--person));box-shadow:inset 0 0 0 2px color-mix(in srgb,var(--person) 72%,transparent);filter:none;outline:none}
 .team-orbit .orbit-person.is-selected{background:color-mix(in srgb,var(--control) 78%,var(--person));box-shadow:inset 0 0 0 2px var(--person)}
-.team-orbit .orbit-person img,.team-orbit .orbit-person .avatar-fallback{position:relative;inset:auto;grid-column:1;grid-row:1;width:52px;height:52px;border-radius:1px;object-fit:cover;padding:0}
+.team-orbit .orbit-person img,.team-orbit .orbit-person .avatar-fallback{position:relative;inset:auto;grid-column:1;grid-row:1;width:clamp(36px,5vw,48px);height:auto;aspect-ratio:1;border-radius:1px;object-fit:cover;padding:0}
 .team-orbit .orbit-person img{z-index:2}.team-orbit .orbit-person .avatar-fallback{z-index:1;display:grid;place-items:center;background:var(--person);font-size:13px}
-.player-info{grid-column:2;grid-row:1;align-self:center;display:grid;gap:5px;min-width:0;padding-right:38px}.player-info b{overflow:hidden;font-size:15px;line-height:1.1;white-space:nowrap;text-overflow:ellipsis}.player-info small{display:grid;gap:3px;color:var(--soft);font:700 10px/1.15 ui-monospace,SFMono-Regular,Consolas,monospace;white-space:nowrap}.player-info small span{overflow:hidden;text-overflow:ellipsis}.player-role{color:var(--muted)}
-.player-status{position:absolute;top:12px;right:10px;display:flex;align-items:center;gap:4px;color:var(--primary);font:900 9px/1 ui-monospace,SFMono-Regular,Consolas,monospace}.player-status::before{content:"";width:6px;height:6px;background:currentColor;box-shadow:1px 1px 0 rgba(0,0,0,.28)}.op4 .player-status{color:#c59628}
+.player-info{display:grid;gap:2px;min-width:0}
+.player-info b{font-size:clamp(12px,2.2vw,15px);line-height:1.35;overflow-wrap:anywhere}
+.player-info small{display:block;color:var(--muted);font:700 10px/1.3 ui-monospace,SFMono-Regular,Consolas,monospace}
+.player-info small span{display:block;overflow-wrap:anywhere}
+.player-status{position:absolute;top:5px;right:5px;display:flex;align-items:center;gap:4px;color:var(--primary);font:900 9px/1 ui-monospace,SFMono-Regular,Consolas,monospace}.player-status::before{content:"";width:6px;height:6px;background:currentColor;box-shadow:1px 1px 0 rgba(0,0,0,.28)}.op4 .player-status{color:#c59628}
 .member-card{border-radius:4px;background:var(--panel-strong);box-shadow:6px 6px 0 rgba(0,0,0,.28)}
 .member-card::before{border-radius:0;opacity:.12}
 .member-card:hover{transform:translate(-3px,-3px);box-shadow:9px 9px 0 rgba(0,0,0,.30)}
@@ -336,6 +368,52 @@ html[data-theme="light"] .theme-btn .moon{opacity:1;transform:scale(1) rotate(0)
 .profile-panel{border-radius:4px;box-shadow:8px 8px 0 rgba(0,0,0,.3)}
 .profile-panel::before{background:linear-gradient(90deg,transparent,color-mix(in srgb,var(--profile) 7%,transparent));}
 .profile-avatar,.profile-avatar img,.profile-avatar-fallback{border-radius:2px}
+.team-orbit .orbit-person.op-haee{--person:#58d5c8}
+html[data-theme="light"] .team-orbit .orbit-person.op-haee{--person:#1c7069}
+.team-thanks > h2{margin:0 0 16px;font-size:clamp(25px,4vw,38px);line-height:1.15}
+.thanks-card{
+  --thanks-accent:#a69bf4;
+  display:grid;
+  grid-template-columns:auto minmax(0,1fr);
+  align-items:center;
+  gap:12px clamp(16px,4vw,38px);
+  padding:clamp(16px,3vw,30px);
+  border:1px solid var(--line);
+  border-inline-start:4px solid var(--thanks-accent);
+  border-radius:3px;
+  background:linear-gradient(105deg,color-mix(in srgb,var(--thanks-accent) 13%,var(--panel-strong)),var(--panel-strong) 72%);
+  box-shadow:var(--shadow);
+}
+html[data-theme="light"] .thanks-card{--thanks-accent:#64569d}
+.thanks-card img{
+  grid-row:1 / span 2;
+  width:clamp(64px,12vw,118px);
+  height:auto;
+  padding:4px;
+  border:1px solid var(--thanks-accent);
+  border-radius:2px;
+  background:var(--panel-strong);
+}
+.thanks-card h3{
+  min-width:0;
+  margin:0;
+  color:var(--text);
+  font-size:clamp(22px,4vw,38px);
+  line-height:1.15;
+  overflow-wrap:anywhere;
+}
+.thanks-intro{
+  max-width:65ch;
+  color:var(--muted);
+  font-size:clamp(15px,1.6vw,17px);
+  line-height:1.75;
+}
+.thanks-intro p{margin:0}
+.thanks-intro p + p{margin-top:.6em}
+@media(max-width:600px){
+  .thanks-card img{grid-row:auto}
+  .thanks-intro{grid-column:1 / -1}
+}
 .story-index,.story-card{border-radius:4px;box-shadow:5px 5px 0 rgba(0,0,0,.22);backdrop-filter:none;-webkit-backdrop-filter:none}
 .return-home{border-radius:4px;box-shadow:4px 4px 0 rgba(0,0,0,.3)}
 .return-home:hover{transform:translate(-2px,-2px);box-shadow:6px 6px 0 rgba(0,0,0,.32)}
@@ -347,7 +425,7 @@ body,html[data-theme="light"] body{background:linear-gradient(180deg,var(--bg),v
 html[data-theme="light"]{--bg:#d9dccb;--bg2:#c9cfba;--panel:#ece7cf;--panel-strong:#ddd8c0;--line:#85846e;--primary:#4e9c49;--primary2:#2f6e36;--text:#262a23;--muted:#596257;--soft:#777968;--shadow:6px 6px 0 rgba(73,75,63,.30)}
 body,html[data-theme="light"] body{background-color:var(--bg);background-image:linear-gradient(rgba(112,185,87,.045) 1px,transparent 1px),linear-gradient(90deg,rgba(112,185,87,.045) 1px,transparent 1px),linear-gradient(180deg,var(--bg),var(--bg2) 48%,var(--bg));background-size:32px 32px,32px 32px,auto}
 .team-orbit.player-list-panel .orbit-person,.team-orbit.player-list-panel .orbit-person:hover,.team-orbit.player-list-panel .orbit-person:focus-visible{animation:none!important;transform:none!important}
-@media(max-width:620px){.team-orbit.player-list-panel{width:100%;max-width:430px}.player-list-rows{grid-template-columns:1fr}.team-orbit .orbit-person{height:68px;grid-template-columns:46px minmax(0,1fr);padding:9px 11px}.team-orbit .orbit-person img,.team-orbit .orbit-person .avatar-fallback{width:46px;height:46px}.player-info b{font-size:14px}.player-info small{display:flex;gap:7px;font-size:9px}.player-role::before{content:"· "}.player-list-head{padding:13px 14px}.player-list-motd{padding-left:14px;padding-right:14px}}
+@media(max-width:620px){.team-orbit.player-list-panel{width:100%;max-width:430px}.player-list-head{padding:13px 14px}.player-list-motd{padding-left:14px;padding-right:14px}}
 .theme-icon{position:absolute;font-size:25px;line-height:1;transition:opacity .2s steps(2),transform .2s steps(2)}
 .theme-icon svg{width:40px;height:40px;display:block;image-rendering:pixelated;filter:drop-shadow(2px 2px 0 rgba(0,0,0,.34))}
 .theme-icon-sun{color:#f4d968}.theme-icon-moon{color:#d8d9c7;opacity:0;transform:scale(.65)}
@@ -517,7 +595,7 @@ html[data-theme="light"]{--oa-nav-text:#13241b;--oa-nav-muted:#5d7065;--oa-nav-m
   <meta property="og:locale" content="zh_CN">
   <meta property="og:site_name" content="无声无息:Once Again">
   <meta property="og:title" content="团队介绍｜无声无息:Once Again">
-  <meta property="og:description" content="认识无声无息:Once Again 的四位团队成员，了解项目策划、模组移植、核心开发和团队协作职责。">
+  <meta property="og:description" content="认识无声无息:Once Again 的团队。我们因为热爱《我的世界》聚在一起，策划、开发和测试自己的服务器。">
   <meta property="og:url" content="https://zxwusheng.github.io/jieshao.html">
   <meta property="og:image" content="https://zxwusheng.github.io/最新服务器title.png">
   <meta property="og:image:width" content="1024">
@@ -589,22 +667,27 @@ html[data-theme="light"]{--oa-nav-text:#13241b;--oa-nav-muted:#5d7065;--oa-nav-m
     <div class="reveal show">
       <img class="oa-team-title-image" src="最新服务器title.png" alt="Once Again · Without A Sound 服务器标题" width="1024" height="258" decoding="async" fetchpriority="high">
       <div class="eyebrow">MEET THE TEAM</div>
-      <h1>我们只有四个人。<span>但想把这件事认真做完。</span></h1>
-      <p class="hero-copy">没有庞大的工作室，也没有一长串头衔。<strong>无声无息: Once Again</strong> 目前由四个人共同推进：有人负责方向，有人负责把玩法落地，有人负责底层逻辑，也有人负责……在路边值守。</p>
+      <h1>因为热爱，<span>我们一起做服。</span></h1>
+      <p class="hero-copy">我们是一群热爱《我的世界》的玩家。从策划、开发到试玩，我们把各自喜欢做的事凑到一起，慢慢把<strong>无声无息: Once Again</strong>做出来。</p>
       <div class="hero-metrics">
-        <div class="metric" data-fallback="绿色收纳袋"><img class="metric-icon mc-official-item" data-mc-item="bundle_green" src="mc-icons/bundle_green.png" alt="绿色收纳袋" decoding="async" referrerpolicy="no-referrer" width="16" height="16" loading="lazy"><b>04</b><span>PEOPLE / 成员</span></div>
         <div class="metric" data-fallback="树脂砖"><img class="metric-icon mc-official-item" data-mc-item="resin_brick" src="mc-icons/resin_brick.png" alt="树脂砖" decoding="async" referrerpolicy="no-referrer" width="16" height="16" loading="lazy"><b>01</b><span>SERVER / 项目</span></div>
         <div class="metric" data-fallback="望远镜"><img class="metric-icon mc-official-item" data-mc-item="spyglass" src="mc-icons/spyglass.png" alt="望远镜" decoding="async" referrerpolicy="no-referrer" width="16" height="16" loading="lazy"><b>∞</b><span>TODO / 想做的事</span></div>
       </div>
     </div>
     <div class="team-orbit player-list-panel reveal show" aria-label="团队成员名单，状态为介绍展示">
-      <div class="player-list-head"><span class="server-dot"></span><strong>Once Again</strong><span class="player-count">4 / 4</span></div>
-      <div class="player-list-motd">无声无息 · 四个人，一个服务器<br><small>状态为成员介绍展示，并非实时在线数据。</small></div>
+      <div class="player-list-head"><span class="server-dot"></span><strong>Once Again · 团队名单</strong></div>
+      <div class="player-list-motd">选择头像，查看成员档案。<br><small>状态为成员介绍展示，并非实时在线数据。</small></div>
       <div class="player-list-rows">
         <div class="orbit-person op1 is-selected" data-id="owner" tabindex="0" role="button" aria-pressed="true" aria-label="查看在下无声的成员档案" title="在下无声 / ZX_Wu_Sheng" aria-controls="profilePanel"><span class="avatar-fallback">无声</span><img src="assets/avatars/ZX_Wu_Sheng.png" data-mcid="ZX_Wu_Sheng" data-avatar-size="160" data-avatar-source="0" alt="ZX_Wu_Sheng 的 Minecraft 头像" loading="eager" width="160" height="160" decoding="async"><span class="player-info"><b>在下无声</b><small><span class="player-mcid">ZX_Wu_Sheng</span><span class="player-role">项目主理人</span></small></span><span class="player-status">在线</span></div>
         <div class="orbit-person op2" data-id="badnng" tabindex="0" role="button" aria-pressed="false" aria-label="查看 Badnng 的成员档案" title="Badnng" aria-controls="profilePanel"><span class="avatar-fallback">NNG</span><img src="assets/avatars/Badnng.png" data-mcid="Badnng" data-avatar-size="160" data-avatar-source="0" alt="Badnng 的 Minecraft 头像" loading="eager" width="160" height="160" decoding="async"><span class="player-info"><b>Badnng</b><small><span class="player-mcid">Badnng</span><span class="player-role">玩法开发</span></small></span><span class="player-status">在线</span></div>
         <div class="orbit-person op3" data-id="ksq" tabindex="0" role="button" aria-pressed="false" aria-label="查看 KsqsnK 的成员档案" title="KsqsnK" aria-controls="profilePanel"><span class="avatar-fallback">KS</span><img src="assets/avatars/KsqsnK.png" data-mcid="KsqsnK" data-avatar-size="160" data-avatar-source="0" alt="KsqsnK 的 Minecraft 头像" loading="eager" width="160" height="160" decoding="async"><span class="player-info"><b>KsqsnK</b><small><span class="player-mcid">KsqsnK</span><span class="player-role">核心系统</span></small></span><span class="player-status">在线</span></div>
         <div class="orbit-person op4" data-id="wang" tabindex="0" role="button" aria-pressed="false" aria-label="查看王美丽的成员档案" title="王美丽 / Wangmeili" aria-controls="profilePanel"><span class="avatar-fallback">王</span><img src="assets/avatars/Wangmeili.png" data-mcid="Wangmeili" data-avatar-size="160" data-avatar-source="0" alt="Wangmeili 的 Minecraft 头像" loading="eager" width="160" height="160" decoding="async"><span class="player-info"><b>王美丽</b><small><span class="player-mcid">Wangmeili</span><span class="player-role">安保 / 气氛组</span></small></span><span class="player-status">挂机</span></div>
+        <div class="orbit-person op-haee" data-id="haee" tabindex="0" role="button" aria-pressed="false" aria-label="查看 Haee_cn 的成员档案" title="Haee_cn" aria-controls="profilePanel">
+          <span class="avatar-fallback" aria-hidden="true">H</span>
+          <img src="assets/avatars/Haee_cn.png" data-mcid="Haee_cn" data-avatar-size="160" data-avatar-source="0" alt="Haee_cn 的 Minecraft 头像" width="160" height="160" decoding="async">
+          <span class="player-info"><b>Haee_cn</b><small><span class="player-role">测试员</span></small></span>
+          <span class="player-status">测试</span>
+        </div>
       </div>
     </div>
   </div>
@@ -612,12 +695,12 @@ html[data-theme="light"]{--oa-nav-text:#13241b;--oa-nav-muted:#5d7065;--oa-nav-m
 <section class="section" id="team">
   <div class="container">
     <div class="section-head reveal">
-      <div><div class="kicker">TEAM ROSTER / 04 PLAYERS</div><h2>四个人，四种职责。</h2></div>
-      <p class="section-desc">把“服主、开发、安保”这些简单标签拆开一点，你会更清楚服务器背后到底是谁在负责什么。选择成员卡片，可以查看下方的职责档案。</p>
+      <div><div class="kicker">TEAM ROSTER</div><h2>认识我们的团队</h2></div>
+      <p class="section-desc">从服主、开发到测试和安保，大家各有分工。选择成员卡片，可以查看下方的职责档案。</p>
     </div>
     <div class="team-grid">
       <article class="member-card active reveal" data-id="owner" tabindex="0" role="button" aria-label="查看在下无声的成员档案" aria-pressed="true" aria-controls="profilePanel">
-        <div class="card-top"><span class="member-number">PLAYER / 01</span><div class="head-wrap"><span class="head-fallback">无声</span><img src="assets/avatars/ZX_Wu_Sheng.png" data-mcid="ZX_Wu_Sheng" data-avatar-size="160" data-avatar-source="0" alt="ZX_Wu_Sheng 的 Minecraft 头像" loading="lazy" width="160" height="160" decoding="async"></div></div>
+        <div class="card-top"><div class="head-wrap"><span class="head-fallback">无声</span><img src="assets/avatars/ZX_Wu_Sheng.png" data-mcid="ZX_Wu_Sheng" data-avatar-size="160" data-avatar-source="0" alt="ZX_Wu_Sheng 的 Minecraft 头像" loading="lazy" width="160" height="160" decoding="async"></div></div>
         <div class="member-role">SERVER OWNER · PROJECT LEAD</div>
         <h3 class="member-name">在下无声</h3>
         <div class="mcid">MCID / ZX_Wu_Sheng</div>
@@ -626,7 +709,7 @@ html[data-theme="light"]{--oa-nav-text:#13241b;--oa-nav-muted:#5d7065;--oa-nav-m
         <div class="status">ONLINE · PLANNING</div>
       </article>
       <article class="member-card badnng reveal" data-id="badnng" tabindex="0" role="button" aria-label="查看 Badnng 的成员档案" aria-pressed="false" aria-controls="profilePanel">
-        <div class="card-top"><span class="member-number">PLAYER / 02</span><div class="head-wrap"><span class="head-fallback">NNG</span><img src="assets/avatars/Badnng.png" data-mcid="Badnng" data-avatar-size="160" data-avatar-source="0" alt="Badnng 的 Minecraft 头像" loading="lazy" width="160" height="160" decoding="async"></div></div>
+        <div class="card-top"><div class="head-wrap"><span class="head-fallback">NNG</span><img src="assets/avatars/Badnng.png" data-mcid="Badnng" data-avatar-size="160" data-avatar-source="0" alt="Badnng 的 Minecraft 头像" loading="lazy" width="160" height="160" decoding="async"></div></div>
         <div class="member-role">MOD & GAMEPLAY DEVELOPER</div>
         <h3 class="member-name">Badnng</h3>
         <div class="mcid">MCID / Badnng</div>
@@ -635,7 +718,7 @@ html[data-theme="light"]{--oa-nav-text:#13241b;--oa-nav-muted:#5d7065;--oa-nav-m
         <div class="status">BUILDING · GAMEPLAY</div>
       </article>
       <article class="member-card ksq reveal" data-id="ksq" tabindex="0" role="button" aria-label="查看 KsqsnK 的成员档案" aria-pressed="false" aria-controls="profilePanel">
-        <div class="card-top"><span class="member-number">PLAYER / 03</span><div class="head-wrap"><span class="head-fallback">KS</span><img src="assets/avatars/KsqsnK.png" data-mcid="KsqsnK" data-avatar-size="160" data-avatar-source="0" alt="KsqsnK 的 Minecraft 头像" loading="lazy" width="160" height="160" decoding="async"></div></div>
+        <div class="card-top"><div class="head-wrap"><span class="head-fallback">KS</span><img src="assets/avatars/KsqsnK.png" data-mcid="KsqsnK" data-avatar-size="160" data-avatar-source="0" alt="KsqsnK 的 Minecraft 头像" loading="lazy" width="160" height="160" decoding="async"></div></div>
         <div class="member-role">CORE SYSTEMS DEVELOPER</div>
         <h3 class="member-name">KsqsnK</h3>
         <div class="mcid">MCID / KsqsnK</div>
@@ -644,7 +727,7 @@ html[data-theme="light"]{--oa-nav-text:#13241b;--oa-nav-muted:#5d7065;--oa-nav-m
         <div class="status">COMPILING · CORE LOGIC</div>
       </article>
       <article class="member-card wang reveal" data-id="wang" tabindex="0" role="button" aria-label="查看王美丽的成员档案" aria-pressed="false" aria-controls="profilePanel">
-        <div class="card-top"><span class="member-number">PLAYER / 04</span><div class="head-wrap"><span class="head-fallback">王</span><img src="assets/avatars/Wangmeili.png" data-mcid="Wangmeili" data-avatar-size="160" data-avatar-source="0" alt="Wangmeili 的 Minecraft 头像" loading="lazy" width="160" height="160" decoding="async"></div></div>
+        <div class="card-top"><div class="head-wrap"><span class="head-fallback">王</span><img src="assets/avatars/Wangmeili.png" data-mcid="Wangmeili" data-avatar-size="160" data-avatar-source="0" alt="Wangmeili 的 Minecraft 头像" loading="lazy" width="160" height="160" decoding="async"></div></div>
         <div class="member-role">??? · SECURITY / ATMOSPHERE UNIT</div>
         <h3 class="member-name">王美丽</h3>
         <div class="mcid">MCID / Wangmeili</div>
@@ -652,12 +735,26 @@ html[data-theme="light"]{--oa-nav-text:#13241b;--oa-nav-muted:#5d7065;--oa-nav-m
         <div class="tags"><span class="tag">挂机值守</span><span class="tag">压力承受</span><span class="tag">路边安保</span></div>
         <div class="status">AFK · SECURITY</div>
       </article>
+      <article class="member-card haee reveal" data-id="haee" tabindex="0" role="button" aria-label="查看 Haee_cn 的成员档案" aria-pressed="false" aria-controls="profilePanel">
+        <div class="card-top">
+          <div class="head-wrap">
+            <span class="head-fallback" aria-hidden="true">H</span>
+            <img src="assets/avatars/Haee_cn.png" data-mcid="Haee_cn" data-avatar-size="160" data-avatar-source="0" alt="Haee_cn 的 Minecraft 头像" loading="lazy" width="160" height="160" decoding="async">
+          </div>
+        </div>
+        <div class="member-role">PLAYTESTER · 测试员</div>
+        <h3 class="member-name">Haee_cn</h3>
+        <div class="mcid">MCID / Haee_cn</div>
+        <p class="member-desc">目前还是学生，是个很喜欢《我的世界》的玩家。加入团队后，他会从玩家的角度试玩服务器，帮我们发现平时容易忽略的问题。</p>
+        <div class="tags"><span class="tag">玩法试玩</span><span class="tag">问题反馈</span></div>
+        <div class="status">PLAYTESTING</div>
+      </article>
     </div>
     <section class="profile-panel reveal" id="profilePanel" style="--profile:#70efad" aria-labelledby="profileTitle" aria-live="polite" aria-atomic="true">
       <div class="profile-inner">
         <div class="profile-avatar"><span class="profile-avatar-fallback" id="profileFallback">无声</span><img id="profileAvatar" src="assets/avatars/ZX_Wu_Sheng.png" data-mcid="ZX_Wu_Sheng" data-avatar-size="240" data-avatar-source="0" alt="在下无声的 Minecraft 头像" width="240" height="240" decoding="async"></div>
         <div>
-          <div class="profile-label" id="profileLabel">SELECTED PROFILE / PLAYER 01</div>
+          <div class="profile-label">成员档案 / PROFILE</div>
           <h3 class="profile-title" id="profileTitle">在下无声 · 项目主理人</h3>
           <p class="profile-text" id="profileText">负责服务器的主要资金投入、整体策划与方向决策。他更像项目的“总控台”：决定我们往哪里走、优先做什么，以及什么时候该把一个过大的脑洞先放回抽屉里。</p>
           <div class="profile-bottom">
@@ -670,11 +767,23 @@ html[data-theme="light"]{--oa-nav-text:#13241b;--oa-nav-muted:#5d7065;--oa-nav-m
     </section>
   </div>
 </section>
+<section id="thanks" aria-labelledby="thanks-title">
+  <div class="container team-thanks reveal">
+    <h2 id="thanks-title">特别鸣谢</h2>
+    <div class="thanks-card">
+      <img src="assets/avatars/rutumn-ruiqiu.jpg" alt="Rutumn-瑞秋的头像" width="640" height="640" loading="lazy" decoding="async">
+      <h3>Rutumn-瑞秋</h3>
+      <div class="thanks-intro">
+        <p>瑞秋是位资深音游玩家，也是我们眼里的绘画大神。她曾为《Phigros》和《Rizline》提供曲绘与插画协助。</p>
+        <p>得知我们团队遇到困难时，她主动提出帮忙，也给了我们不少安慰和鼓励。谢谢你，瑞秋，这份心意我们一直记着。</p>
+      </div>
+    </div>
+  </div>
+</section>
 <section class="section">
   <div class="container story-wrap">
-    <aside class="story-index reveal"><div class="big">04→01</div><p>四个人，不同分工，最后都指向同一个东西：<strong>把服务器真的做出来。</strong></p></aside>
+    <aside class="story-index reveal"><h2 class="big">为爱发电</h2><p>有人写代码，有人调玩法，也有人从头试玩，把遇到的问题带回来一起解决。</p></aside>
     <div>
-      <article class="story-card reveal"><h3>没有“巨大团队”这回事</h3><p>我们现在就是四个人。有人出钱和定方向，有人移植模组和做玩法，有人写核心逻辑和局内指令，还有一个负责挂机、挨骂以及维持某种非常重要但无法量化的团队气氛。</p></article>
       <article class="story-card reveal"><h3>为什么叫 Once Again？</h3><p>因为有些东西停下来，不代表一定要永远停在那里。我们更愿意把这次当作一次重新出发：<strong>不靠夸张的承诺，先把每一件能做好的事做好。</strong></p></article>
       <article class="story-card reveal"><h3>我们想留下什么？</h3><p>不是“看起来很大”的项目介绍，而是一个真正有人在维护、有人在打磨、有人会为一个细节吵半天的服务器。哪怕团队不大，也希望你进入游戏时能感受到它背后有人认真做过。</p></article>
     </div>
@@ -682,9 +791,7 @@ html[data-theme="light"]{--oa-nav-text:#13241b;--oa-nav-muted:#5d7065;--oa-nav-m
 </section>
 <section class="finale">
   <div class="container reveal">
-    <div class="micro">THIS IS NOT A COMPANY.</div>
-    <h2>只是四个人，<br>在做一件<span>喜欢的事。</span></h2>
-    <p>无声无息: Once Again。四个人，一个服务器，一点一点把它重新做起来。</p>
+    <h2>一起做一个<br><span>我们也想玩的服务器。</span></h2>
     <a class="return-home" href="index.html">← 返回主页</a>
   </div>
 </section>
@@ -709,24 +816,29 @@ html[data-theme="light"]{--oa-nav-text:#13241b;--oa-nav-muted:#5d7065;--oa-nav-m
   // 成员档案
   const members = {
     owner:{
-      color:'#70efad', number:'01', name:'在下无声', title:'项目主理人', mcid:'ZX_Wu_Sheng', fallback:'无声',
+      color:'#70efad', name:'在下无声', title:'项目主理人', mcid:'ZX_Wu_Sheng', fallback:'无声',
       focus:'资金 / 策划 / 决策', status:'ONLINE · PLANNING',
       text:'负责服务器的主要资金投入、整体策划与方向决策。他更像项目的“总控台”：决定我们往哪里走、优先做什么，以及什么时候该把一个过大的脑洞先放回抽屉里。'
     },
     badnng:{
-      color:'#59a9ff', number:'02', name:'Badnng', title:'模组与玩法开发', mcid:'Badnng', fallback:'NNG',
+      color:'#59a9ff', name:'Badnng', title:'模组与玩法开发', mcid:'Badnng', fallback:'NNG',
       focus:'模组移植 / 兼容 / 玩法', status:'BUILDING · GAMEPLAY',
       text:'负责模组移植、兼容性修改、主题玩法与内容系统开发。很多“这个玩法要是能这样就好了”的想法，最后都需要在这里变成真正能加载、能运行、能玩的东西。'
     },
     ksq:{
-      color:'#c98cff', number:'03', name:'KsqsnK', title:'核心系统开发', mcid:'KsqsnK', fallback:'KS',
+      color:'#c98cff', name:'KsqsnK', title:'核心系统开发', mcid:'KsqsnK', fallback:'KS',
       focus:'代码逻辑 / 指令 / 交互', status:'COMPILING · CORE LOGIC',
       text:'负责服务器的主要代码逻辑、局内指令与交互流程。玩法规则、事件触发、条件判断和各种幕后系统，很多都从这里开始写成服务器真正能理解的逻辑。'
     },
     wang:{
-      color:'#ffcf66', number:'04', name:'王美丽', title:'??? / 安保兼气氛组', mcid:'Wangmeili', fallback:'王',
+      color:'#ffcf66', name:'王美丽', title:'??? / 安保兼气氛组', mcid:'Wangmeili', fallback:'王',
       focus:'挂机 / 值守 / 气氛', status:'AFK · SECURITY',
       text:'长期负责挂机值守、承受团队吐槽、充当服务器吉祥物与路边安保单位。工作范围不明、职责边界不明，但只要看到他在那儿，某种意义上就说明安保系统仍在运行。'
+    },
+    haee:{
+      color:'#58d5c8', name:'Haee_cn', title:'测试员', mcid:'Haee_cn', fallback:'H',
+      focus:'玩法试玩 / 问题反馈', status:'PLAYTESTING',
+      text:'Haee_cn 目前还是学生，平时很喜欢玩《我的世界》。在团队里，他从玩家的角度试玩服务器，留意流程哪里容易卡住、玩法哪里还不够清楚，再把遇到的问题反馈给开发团队。'
     }
   };
   function selectMember(id){
@@ -742,7 +854,6 @@ html[data-theme="light"]{--oa-nav-text:#13241b;--oa-nav-muted:#5d7065;--oa-nav-m
       person.setAttribute('aria-pressed',String(selected));
     });
     const panel = $('#profilePanel'); panel.style.setProperty('--profile',m.color);
-    $('#profileLabel').textContent = `SELECTED PROFILE / PLAYER ${m.number}`;
     $('#profileTitle').textContent = `${m.name} · ${m.title}`;
     $('#profileText').textContent = m.text;
     $('#profileMcid').textContent = m.mcid;

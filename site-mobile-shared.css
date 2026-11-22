@@ -75,14 +75,14 @@ html:not(.motion-ready) :is(.reveal, .reveal-left, .reveal-right, .reveal-smooth
 .page-team .metric.mc-item-failed::before { display: grid; place-items: center; line-height: 1.3; overflow-wrap: anywhere; }
 
 /* 浅色纸张上的小字使用更深的墨色，保留卡片与装饰的原配色。 */
-html[data-theme="light"] :is(.page-home .eyebrow, .page-team .eyebrow, .page-team .micro, .page-team .profile-label, .page-team .player-status, .oa-scene-kicker) {
+html[data-theme="light"] :is(.page-home .eyebrow, .page-team .eyebrow, .page-team .profile-label, .page-team .player-status, .oa-scene-kicker) {
   color: var(--site-nav-highlight) !important;
 }
 html[data-theme="light"] .page-team .member-card { --member-ink: #2a6a34; }
 html[data-theme="light"] .page-team .member-card.badnng { --member-ink: #235d87; }
 html[data-theme="light"] .page-team .member-card.ksq { --member-ink: #6b408c; }
 html[data-theme="light"] .page-team .member-card.wang { --member-ink: #785018; }
-html[data-theme="light"] .page-team .member-card :is(.member-number, .member-role, .status) { color: var(--member-ink); }
+html[data-theme="light"] .page-team .member-card :is(.member-role, .status) { color: var(--member-ink); }
 html[data-theme="light"] .page-team .op4 .player-status { color: #785018 !important; }
 html[data-theme="light"] .page-recruit :is(.recruit-kicker, .mc-statusbar strong, .mc-slot, .role-card small, .terms-panel h3, .contact-card .label) {
   color: var(--site-nav-highlight);
@@ -447,7 +447,7 @@ body.page-sponsor {
 
   .page-team .hero-metrics {
     display: grid !important;
-    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
     gap: 8px !important;
   }
 
@@ -586,7 +586,6 @@ body.page-sponsor {
   }
 
   .page-team .hero-metrics {
-    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
     gap: 6px !important;
   }
 

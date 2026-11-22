@@ -397,6 +397,18 @@ body.page-sponsor .qr-actions a:focus-visible {
   <meta name="twitter:card" content="summary_large_image">
   <script src="site-config.js?v=20261008" defer></script>
   <script src="site-common.js?v=20261009-2" defer></script>
+  <script>
+    document.addEventListener('error', (event) => {
+      const image = event.target;
+      if (!(image instanceof HTMLImageElement) || !image.matches('picture > img.payment-qr')) return;
+      const source = image.previousElementSibling;
+      if (source?.localName === 'source' && image.currentSrc !== image.src) {
+        // WebP 无法加载时，移除候选图，让浏览器重试原始 PNG。
+        event.stopImmediatePropagation();
+        source.remove();
+      }
+    }, true);
+  </script>
 </head>
 <body class="page-sponsor">
   <a class="site-skip-link" href="#main-content">跳到主要内容</a>
@@ -448,7 +460,14 @@ body.page-sponsor .qr-actions a:focus-visible {
 <section class="payment-grid">
   <article class="pay-card alipay">
     <div class="pay-head"><h2>推荐使用支付宝</h2><span class="pay-badge">支持信用卡｜花呗付款</span></div>
-    <div class="qr-area"><div class="qr-frame"><img class="payment-qr" src="assets/payments/alipay.png" alt="支付宝收款码" width="1080" height="1680" loading="lazy" decoding="async"></div></div>
+    <div class="qr-area">
+      <div class="qr-frame">
+        <picture>
+          <source srcset="assets/payments/alipay-preview.webp" type="image/webp">
+          <img class="payment-qr" src="assets/payments/alipay.png" alt="支付宝收款码" width="1080" height="1680" loading="lazy" decoding="async">
+        </picture>
+      </div>
+    </div>
     <div class="qr-actions">
       <button type="button" data-image-preview data-preview-src="assets/payments/alipay.png" data-preview-title="支付宝收款码预览" aria-label="放大查看支付宝收款码">放大查看</button>
       <a href="assets/payments/alipay.png" target="_blank" rel="noopener" aria-label="在新窗口查看支付宝收款码原图">查看原图 ↗</a>
@@ -457,7 +476,14 @@ body.page-sponsor .qr-actions a:focus-visible {
   </article>
   <article class="pay-card wechat">
     <div class="pay-head"><h2>推荐使用微信支付</h2><span class="pay-badge">微信扫码即可</span></div>
-    <div class="qr-area"><div class="qr-frame"><img class="payment-qr" src="assets/payments/wechat.png" alt="微信支付收款码" width="1263" height="1719" loading="lazy" decoding="async"></div></div>
+    <div class="qr-area">
+      <div class="qr-frame">
+        <picture>
+          <source srcset="assets/payments/wechat-preview.webp" type="image/webp">
+          <img class="payment-qr" src="assets/payments/wechat.png" alt="微信支付收款码" width="1263" height="1719" loading="lazy" decoding="async">
+        </picture>
+      </div>
+    </div>
     <div class="qr-actions">
       <button type="button" data-image-preview data-preview-src="assets/payments/wechat.png" data-preview-title="微信支付收款码预览" aria-label="放大查看微信支付收款码">放大查看</button>
       <a href="assets/payments/wechat.png" target="_blank" rel="noopener" aria-label="在新窗口查看微信支付收款码原图">查看原图 ↗</a>
