@@ -5,7 +5,7 @@
   <script src="site-theme.js"></script>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>无声无息:Once Again｜Minecraft 服务器</title>
-  <meta name="description" content="无声无息:Once Again Minecraft 服务器官方网站。了解原版生存、动态难度、安全区旅馆与代币成长规划，查看筹备动态、团队和支持方式。">
+  <meta name="description" content="无声无息:Once Again Minecraft 服务器官网。基于原版生存，融合个人动态难度、安全区旅馆与代币成长；查看玩法规划、团队与支持方式。">
   <style>
     :root {
       color-scheme: dark;
@@ -1716,6 +1716,9 @@
         transform: none;
         filter: none;
       }
+      .journey-track .journey-line span {
+        width: 100%;
+      }
     }
     .hero-title {
       max-width: 720px;
@@ -2150,7 +2153,9 @@
       box-shadow: 0 0 16px rgba(255,79,154,.35);
       transition: width 1.2s cubic-bezier(.2,.8,.2,1);
     }
-    .journey-track.journey-active .journey-line span { width: 100%; }
+    .journey-track.journey-active .journey-line span,
+    .journey-track.reveal-active .journey-line span,
+    html:not(.motion-ready) .journey-track .journey-line span { width: 100%; }
     .journey-step {
       position: relative;
       z-index: 1;
@@ -2202,7 +2207,7 @@
       transform-style: preserve-3d;
       will-change: transform;
     }
-    @media (max-width: 1050px) {
+    @media (max-width: 1023px) {
       .journey-track { grid-template-columns: repeat(2, minmax(0, 1fr)); }
       .journey-line { display: none; }
     }
@@ -3714,12 +3719,6 @@
       transition-delay: var(--delay, 0ms), var(--delay, 0ms) !important;
       will-change: auto !important;
     }
-    @supports (content-visibility:auto) {
-      main > section:not(.hero) {
-        content-visibility:auto;
-        contain-intrinsic-size:760px;
-      }
-    }
     .oa-electric-layer,
     .oa-electric-bolt,
     .oa-electric-scan,
@@ -3960,7 +3959,7 @@
   <meta property="og:locale" content="zh_CN">
   <meta property="og:site_name" content="无声无息:Once Again">
   <meta property="og:title" content="无声无息:Once Again｜Minecraft 服务器">
-  <meta property="og:description" content="无声无息:Once Again Minecraft 服务器官方网站。了解原版生存、动态难度、安全区旅馆与代币成长规划，查看筹备动态、团队和支持方式。">
+  <meta property="og:description" content="无声无息:Once Again Minecraft 服务器官网。基于原版生存，融合个人动态难度、安全区旅馆与代币成长；查看玩法规划、团队与支持方式。">
   <meta property="og:url" content="https://zxwusheng.github.io/">
   <meta property="og:image" content="https://zxwusheng.github.io/最新服务器title.png">
   <meta property="og:image:width" content="1024">
@@ -4065,9 +4064,7 @@
             </span>
           </h1>
           <p class="hero-description">
-            欢迎来到“无声无息:Once Again”。这里保留原版生存的自由，
-            并加入个人动态难度、安全区旅馆、怪物代币与角色成长。
-            从探索与战斗中获得资源，回到旅馆整备，然后再次出发。
+            保留原版生存的自由，融入个人动态难度、安全区旅馆与代币成长；每一次归来，都是下一次出发的起点。
           </p>
           <div class="hero-actions">
             <a class="button button-primary" href="#join">查看开放状态</a>
@@ -4075,7 +4072,7 @@
               class="button button-secondary"
               href="#features"
             >
-              查看服务器介绍
+              核心玩法
             </a>
           </div>
           <p class="hero-server-address">
@@ -4094,8 +4091,7 @@
               无声无息:Once Again
             </h2>
             <p class="card-description">
-              原版生存 × 动态难度 × 安全区成长体系。
-              每一次归来，都是下一次冒险的起点。
+              原版生存之上的循环冒险体验。
             </p>
             <div class="block-scene">
               <div class="scene-star one"></div>
@@ -4121,7 +4117,7 @@
                 <strong>代币升级</strong>
               </div>
               <div class="card-info-item">
-                <span>开放时间</span>
+                <span>当前状态</span>
                 <strong>筹备中</strong>
               </div>
             </div>
@@ -4133,81 +4129,45 @@
       <div class="container">
         <div class="section-heading reveal-left">
           <span class="eyebrow">玩法 / GAMEPLAY</span>
-          <h2>
-            自由生存，但每一次冒险都会更进一步
-          </h2>
-          <p>
-            首版玩法围绕“进入野外 → 击杀怪物 → 获得代币 → 返回安全区兑换 → 属性成长”展开，
-            让原版生存拥有清晰、可持续的长期目标。
-          </p>
+          <h2>六大核心机制</h2>
+          <p>保留原版框架，用阶段目标让探索与战斗持续产生回报。</p>
         </div>
         <div class="feature-grid">
-          <article
-            class="feature-card reveal"
-            style="--delay: 0ms;"
-          >
+          <article class="feature-card feature-card--lead reveal" style="--delay: 0ms;">
             <div class="feature-icon mc-item-icon" role="img" aria-label="木镐" data-fallback="木镐"><img class="mc-official-item" data-mc-item="wood_pickaxe" src="mc-icons/wood_pickaxe.png" alt="" decoding="async" referrerpolicy="no-referrer" width="16" height="16" loading="lazy"></div>
+            <span class="feature-tag">基础规则</span>
             <h3>原版自由生存</h3>
-            <p>
-              不强制职业与特殊武器。采集、建造、探索和装备发展仍遵循原版逻辑，
-              玩家可以按照自己的节奏决定冒险方向。
-            </p>
+            <p>不设强制职业与专属武器。采集、建造与装备路线沿用原版逻辑，按自己的节奏推进。</p>
           </article>
-          <article
-            class="feature-card reveal"
-            style="--delay: 90ms;"
-          >
+          <article class="feature-card feature-card--lead reveal" style="--delay: 70ms;">
             <div class="feature-icon mc-item-icon" role="img" aria-label="红色床" data-fallback="红色床"><img class="mc-official-item" data-mc-item="bed_red" src="mc-icons/bed_red.png" alt="" decoding="async" referrerpolicy="no-referrer" width="16" height="16" loading="lazy"></div>
+            <span class="feature-tag">安全区枢纽</span>
             <h3>冒险家旅馆</h3>
-            <p>
-              安全区旅馆提供床位、餐厅、公告与固定兑换商人，
-              并设有道具兑换 NPC（商人），分别负责成长类与功能类兑换，
-              是补给、回城、集合以及进行成长兑换的核心据点。
-            </p>
+            <p>安全区核心据点，集合床位、公告与兑换商人；玩家可在此补给、回城整备与集结出发。</p>
           </article>
-          <article
-            class="feature-card reveal"
-            style="--delay: 180ms;"
-          >
+          <article class="feature-card reveal" style="--delay: 0ms;">
             <div class="feature-icon mc-item-icon" role="img" aria-label="重锤" data-fallback="重锤"><img class="mc-official-item" data-mc-item="mace" src="mc-icons/mace.png" alt="" decoding="async" referrerpolicy="no-referrer" width="16" height="16" loading="lazy"></div>
+            <span class="feature-tag">难度机制</span>
             <h3>个人动态难度</h3>
-            <p>
-              怪物会依据玩家个人难度和所在维度获得生命、伤害、护甲或装备强化，
-              老玩家持续进阶，新玩家也保留追赶空间。
-            </p>
+            <p>怪物生命、伤害与装备随个人难度和维度动态提升，老玩家有挑战，新人也能平稳追赶。</p>
           </article>
-          <article
-            class="feature-card reveal"
-            style="--delay: 0ms;"
-          >
+          <article class="feature-card reveal" style="--delay: 70ms;">
             <div class="feature-icon mc-item-icon" role="img" aria-label="末影之眼" data-fallback="末影之眼"><img class="mc-official-item" data-mc-item="ender_eye" src="mc-icons/ender_eye.png" alt="" decoding="async" referrerpolicy="no-referrer" width="16" height="16" loading="lazy"></div>
+            <span class="feature-tag">探索递进</span>
             <h3>维度递进挑战</h3>
-            <p>
-              主世界承担基础成长，下界提高生命与伤害压力，末地作为更高阶挑战，
-              还会陆续推出精英词条、Boss 与特殊掉落。
-            </p>
+            <p>主世界起步，下界加压，末地迎战高阶内容；后续将拓展精英词条、首领战与专属掉落。</p>
           </article>
-          <article
-            class="feature-card reveal"
-            style="--delay: 90ms;"
-          >
+          <article class="feature-card reveal" style="--delay: 140ms;">
             <div class="feature-icon mc-item-icon" role="img" aria-label="绿宝石" data-fallback="绿宝石"><img class="mc-official-item" data-mc-item="emerald" src="mc-icons/emerald.png" alt="" decoding="async" referrerpolicy="no-referrer" width="16" height="16" loading="lazy"></div>
+            <span class="feature-tag">经济成长</span>
             <h3>代币与属性成长</h3>
-            <p>
-              强化怪物可掉落服务器代币。代币可用于兑换成长类、功能类与补给类道具，
-              也可用于角色属性成长；道具种类丰富多样，随等级上升，可解锁的强力道具也会越来越多。
-            </p>
+            <p>击败强化怪物掉落代币，可兑换补给或提升角色属性，并逐步解锁高阶强化。</p>
           </article>
-          <article
-            class="feature-card reveal"
-            style="--delay: 180ms;"
-          >
+          <article class="feature-card reveal" style="--delay: 210ms;">
             <div class="feature-icon mc-item-icon" role="img" aria-label="收纳袋" data-fallback="收纳袋"><img class="mc-official-item" data-mc-item="bundle" src="mc-icons/bundle.png" alt="" decoding="async" referrerpolicy="no-referrer" width="16" height="16" loading="lazy"></div>
-            <h3>多种多样的道具</h3>
-            <p>
-              各种道具应有尽有：快速回城、药水 buff 加成、特殊技能等等，
-              通过道具兑换 NPC（商人）即可逐步解锁更多实用能力。
-            </p>
+            <span class="feature-tag">辅助道具</span>
+            <h3>实用功能道具</h3>
+            <p>快速回城、药水增益与实用技能可在旅馆商人处随进度解锁，丰富探索手段。</p>
           </article>
         </div>
       </div>
@@ -4216,42 +4176,50 @@
       <div class="container">
         <div class="section-heading reveal-left">
           <span class="eyebrow">一轮冒险 / JOURNEY</span>
-          <h2>一次完整的 Once Again 冒险</h2>
-          <p>
-            从初次进入服务器开始，玩法会自然引导玩家完成“整备、探索、战斗、归来、成长”的循环。
-          </p>
+          <h2>五步冒险循环</h2>
+          <p>从整备出发到带回代币，构成一次完整的单局节奏。</p>
         </div>
-        <div class="journey-track" aria-label="玩家成长流程">
+        <div class="journey-track reveal" aria-label="玩家成长流程">
           <div class="journey-line" aria-hidden="true"><span id="journeyProgress"></span></div>
           <article class="journey-step reveal" style="--delay: 0ms;">
-            <span class="journey-number">01</span>
-            <div class="journey-icon mc-item-icon" role="img" aria-label="指南针" data-fallback="指南针"><img class="mc-official-item" data-mc-item="compass_item" src="mc-icons/compass_item.png" alt="" decoding="async" referrerpolicy="no-referrer" width="16" height="16" loading="lazy"></div>
+            <div class="journey-step-head">
+              <span class="journey-number">01</span>
+              <div class="journey-icon mc-item-icon" role="img" aria-label="指南针" data-fallback="指南针"><img class="mc-official-item" data-mc-item="compass_item" src="mc-icons/compass_item.png" alt="" decoding="async" referrerpolicy="no-referrer" width="16" height="16" loading="lazy"></div>
+            </div>
             <h3>抵达旅馆</h3>
-            <p>在初始大厅了解规则，领取基础装备与食物，熟悉安全区和冒险流程。</p>
+            <p>了解基础规则，领取初始装备与食物。</p>
           </article>
-          <article class="journey-step reveal" style="--delay: 80ms;">
-            <span class="journey-number">02</span>
-            <div class="journey-icon mc-item-icon" role="img" aria-label="地图" data-fallback="地图"><img class="mc-official-item" data-mc-item="map_filled" src="mc-icons/map_filled.png" alt="" decoding="async" referrerpolicy="no-referrer" width="16" height="16" loading="lazy"></div>
+          <article class="journey-step reveal" style="--delay: 70ms;">
+            <div class="journey-step-head">
+              <span class="journey-number">02</span>
+              <div class="journey-icon mc-item-icon" role="img" aria-label="地图" data-fallback="地图"><img class="mc-official-item" data-mc-item="map_filled" src="mc-icons/map_filled.png" alt="" decoding="async" referrerpolicy="no-referrer" width="16" height="16" loading="lazy"></div>
+            </div>
             <h3>进入野外</h3>
-            <p>按照原版方式采集、建造与探索，在自由生存中决定自己的发展路线。</p>
+            <p>按原版方式采集、建造与自由探索。</p>
           </article>
-          <article class="journey-step reveal" style="--delay: 160ms;">
-            <span class="journey-number">03</span>
-            <div class="journey-icon mc-item-icon" role="img" aria-label="铁剑" data-fallback="铁剑"><img class="mc-official-item" data-mc-item="iron_sword" src="mc-icons/iron_sword.png" alt="" decoding="async" referrerpolicy="no-referrer" width="16" height="16" loading="lazy"></div>
+          <article class="journey-step reveal" style="--delay: 140ms;">
+            <div class="journey-step-head">
+              <span class="journey-number">03</span>
+              <div class="journey-icon mc-item-icon" role="img" aria-label="铁剑" data-fallback="铁剑"><img class="mc-official-item" data-mc-item="iron_sword" src="mc-icons/iron_sword.png" alt="" decoding="async" referrerpolicy="no-referrer" width="16" height="16" loading="lazy"></div>
+            </div>
             <h3>挑战强化怪物</h3>
-            <p>个人难度与维度共同影响怪物强度，战斗不再只是重复清怪。</p>
+            <p>应对随个人难度与维度强化的敌人。</p>
           </article>
-          <article class="journey-step reveal" style="--delay: 240ms;">
-            <span class="journey-number">04</span>
-            <div class="journey-icon mc-item-icon" role="img" aria-label="绿宝石" data-fallback="绿宝石"><img class="mc-official-item" data-mc-item="emerald" src="mc-icons/emerald.png" alt="" decoding="async" referrerpolicy="no-referrer" width="16" height="16" loading="lazy"></div>
+          <article class="journey-step reveal" style="--delay: 210ms;">
+            <div class="journey-step-head">
+              <span class="journey-number">04</span>
+              <div class="journey-icon mc-item-icon" role="img" aria-label="绿宝石" data-fallback="绿宝石"><img class="mc-official-item" data-mc-item="emerald" src="mc-icons/emerald.png" alt="" decoding="async" referrerpolicy="no-referrer" width="16" height="16" loading="lazy"></div>
+            </div>
             <h3>带回代币</h3>
-            <p>击杀怪物获取服务器代币，寻找合适时机安全返程并整理收获。</p>
+            <p>收集掉落代币，看准时机安全返程。</p>
           </article>
-          <article class="journey-step reveal" style="--delay: 320ms;">
-            <span class="journey-number">05</span>
-            <div class="journey-icon mc-item-icon" role="img" aria-label="附魔书" data-fallback="附魔书"><img class="mc-official-item" data-mc-item="book_enchanted" src="mc-icons/book_enchanted.png" alt="" decoding="async" referrerpolicy="no-referrer" width="16" height="16" loading="lazy"></div>
+          <article class="journey-step reveal" style="--delay: 280ms;">
+            <div class="journey-step-head">
+              <span class="journey-number">05</span>
+              <div class="journey-icon mc-item-icon" role="img" aria-label="附魔书" data-fallback="附魔书"><img class="mc-official-item" data-mc-item="book_enchanted" src="mc-icons/book_enchanted.png" alt="" decoding="async" referrerpolicy="no-referrer" width="16" height="16" loading="lazy"></div>
+            </div>
             <h3>兑换并成长</h3>
-            <p>在旅馆向升级券 NPC（商人）与道具兑换 NPC（商人）兑换成长类、功能类和补给类内容，然后再次出发。</p>
+            <p>兑换属性强化与道具，准备下一轮出发。</p>
           </article>
         </div>
       </div>
@@ -4260,27 +4228,27 @@
       <div class="container">
         <div class="section-heading reveal-right">
           <span class="eyebrow">动态与规划 / JOURNAL</span>
-          <h2 id="updates-heading">服务器动态</h2>
-          <p>在这里查看筹备说明、玩法规划与后续更新。下列内容沿用原站说明，发布日期待补充；不代表已上线。</p>
+          <h2 id="updates-heading">筹备进度与规划</h2>
+          <p>当前设计方向如下，具体细节以正式开服公告为准。</p>
         </div>
         <div class="update-log" id="updateLog">
           <article class="news-card update-entry reveal" id="update-core-loop">
-            <p class="update-meta">玩法说明 · 首版核心循环</p>
-            <p class="update-date">日期待补充</p>
-            <h3>从第一次进入，到形成稳定成长闭环</h3>
-            <p>新玩家将在初始大厅了解玩法并领取基础装备与食物。进入野外后，通过挑战强化怪物获取代币，再回到安全区兑换成长类与功能类内容，逐步提升角色属性和个人难度。</p>
+            <p class="update-meta">玩法说明 · 首版目标</p>
+            <p class="update-date">筹备阶段</p>
+            <h3>打通首版核心成长闭环</h3>
+            <p>首版优先跑通整备、探索、动态战斗到代币成长的完整流程，让新手上手明确、老玩家也有持续追求。</p>
           </article>
           <article class="news-card update-entry reveal" id="update-hotel">
             <p class="update-meta">玩法规划 · 安全区系统</p>
-            <p class="update-date">日期待补充</p>
+            <p class="update-date">筹备阶段</p>
             <h3>冒险家旅馆与餐厅补给</h3>
-            <p>旅馆将承担出生、床位、公告、兑换与回城功能；餐厅按独立冷却提供基础食物补给。</p>
+            <p>旅馆将整合出生、床位、公告、兑换与回城功能；餐厅按独立冷却提供基础食物补给。</p>
           </article>
           <article class="news-card update-entry reveal" id="update-future">
             <p class="update-meta">后续规划 · 长期内容</p>
-            <p class="update-date">日期待补充</p>
-            <h3>活动、道具与长期目标</h3>
-            <p>服务器还会陆续推出活动、道具、属性、排行榜、头衔等长期内容。</p>
+            <p class="update-date">后续版本</p>
+            <h3>活动、道具与长线目标</h3>
+            <p>开服后计划逐步拓展主题活动、新道具、属性体系、排行榜与头衔等长线内容。</p>
           </article>
         </div>
       </div>
@@ -4290,16 +4258,9 @@
         <div class="join-box join-box-redesign reveal">
           <div class="join-copy">
             <span class="eyebrow">多人游戏 / JOIN</span>
-            <h2 class="join-title">
-              准备好再次出发？
-            </h2>
-            <div class="join-brand join-brand-art" aria-label="Once Again Without a Sound">
-              <img class="join-brand-title-image" src="最新服务器title.png" alt="Once Again Without a Sound" width="1024" height="258" decoding="async" loading="lazy">
-            </div>
-            <p class="join-description">
-              服务器尚在筹备，地址与开放时间将在确认后公布。开放后可在 Minecraft 多人游戏中添加地址。
-              从冒险家旅馆领取新手物资，走向野外，在一次次探索、战斗与归来中继续成长。
-            </p>
+            <h2 class="join-title">准备好再次出发？</h2>
+            <p class="join-description">开放时间与地址确认后将在此公布，添加后即可从冒险家旅馆启程。</p>
+            <span class="join-status-pill">JAVA 版 · 26.3 · 筹备中</span>
           </div>
           <div class="join-panel">
             <span class="join-panel-label">SERVER ADDRESS</span>
@@ -4315,13 +4276,7 @@
                 开放后公布
               </button>
             </div>
-            <p id="server-opening-note" class="site-note">目前尚未开放，暂不提供连接地址。</p>
-            <div class="join-notes join-note-grid">
-              <span><b>平台</b> Java 版</span>
-              <span><b>版本</b> 26.3</span>
-              <span><b>开放</b> 筹备中</span>
-              <span><b>玩法</b> 动态生存</span>
-            </div>
+            <p id="server-opening-note" class="site-note">暂未开放连接，开服后将解锁一键复制。</p>
           </div>
         </div>
       </div>
@@ -4329,50 +4284,27 @@
     <section id="contact">
       <div class="container">
         <div class="section-heading reveal-left">
-          <span class="eyebrow">
-            CONTACT US
-          </span>
-          <h2>
-            官方社区正在筹备中
-          </h2>
-          <p>
-            社区群聊暂未开放，相关信息会在准备完成后正式公布，敬请期待。
-          </p>
+          <span class="eyebrow">COMMUNITY / 社区与规则</span>
+          <h2>官方渠道筹备中</h2>
+          <p>交流群、反馈入口与游玩规则将在开服前陆续开放。</p>
         </div>
         <div class="contact-grid">
-          <article
-            class="contact-card reveal"
-            style="--delay: 0ms;"
-          >
-              <span>COMMUNITY</span>
+          <article class="contact-card reveal" style="--delay: 0ms;">
+            <span>COMMUNITY</span>
             <h3>官方社区</h3>
-            <p>
-              社区暂未开放，相关群聊与联系方式均在筹备中。
-            </p>
-            <span class="site-unavailable" data-config-link="communityUrl" data-open-label="进入社区">社区入口尚未开放</span>
+            <p>玩家交流群与公告频道正在搭建，开放后可在此加入。</p>
+            <span class="site-unavailable" data-config-link="communityUrl" data-open-label="进入社区">入口筹备中</span>
           </article>
-          <article
-            class="contact-card reveal"
-            style="--delay: 100ms;"
-          >
+          <article class="contact-card reveal" style="--delay: 80ms;">
             <span>FEEDBACK</span>
             <h3>问题反馈</h3>
-            <p>
-              遇到服务器问题时，
-              请截图并描述具体情况。
-            </p>
-            <span class="site-unavailable" data-config-link="feedbackUrl" data-open-label="提交反馈">反馈入口尚未开放</span>
+            <p>遇到异常或有优化建议时，欢迎附截图与说明提交。</p>
+            <span class="site-unavailable" data-config-link="feedbackUrl" data-open-label="提交反馈">入口筹备中</span>
           </article>
-          <article
-            class="contact-card reveal"
-            style="--delay: 200ms;"
-          >
+          <article class="contact-card reveal" style="--delay: 160ms;">
             <span>SERVER RULES</span>
             <h3>服务器规则</h3>
-            <p>
-              为了保证游戏环境，
-              规则将在开放前公布，请届时阅读并遵守。
-            </p>
+            <p>完整游玩规范与社区准则将在开服前同步发布。</p>
             <span class="site-unavailable" data-config-link="rulesUrl" data-open-label="查看规则">规则待发布</span>
           </article>
         </div>
@@ -4393,10 +4325,10 @@
   </footer>
   <aside class="oa-scene-teaser" id="oaSceneTeaser" aria-label="赞助支持入口">
     <a class="oa-scene-teaser-inner" href="scene1.html">
-      <span class="oa-scene-kicker"><i class="oa-scene-kicker-dot"></i>NEW SCENE</span>
-      <strong class="oa-scene-title">助力服务器复活</strong>
-      <span class="oa-scene-desc">前往另一个场景，查看赞助与支持方式。</span>
-      <span class="oa-scene-enter">进入场景 <span aria-hidden="true">→</span></span>
+      <span class="oa-scene-kicker"><i class="oa-scene-kicker-dot"></i>SUPPORT</span>
+      <strong class="oa-scene-title">支持服务器筹备</strong>
+      <span class="oa-scene-desc">查看自愿赞助方式与资金用途说明。</span>
+      <span class="oa-scene-enter">前往查看 <span aria-hidden="true">→</span></span>
     </a>
     <button class="oa-scene-close" id="oaSceneTeaserClose" type="button" aria-label="关闭赞助支持入口">×</button>
   </aside>

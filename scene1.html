@@ -42,14 +42,7 @@ body:before{content:"";position:fixed;inset:0;pointer-events:none;opacity:.32;ba
 .info-icon{font-size:38px;filter:drop-shadow(3px 3px 0 #173d27)}.info-card h3{margin:10px 0 5px;color:var(--green);font-size:21px}.info-card p{margin:0;color:var(--muted);line-height:1.7}
 .thanks{position:relative;width:min(920px,100%);margin:42px auto 0;padding:31px 28px;text-align:center;border:4px solid #071611;box-shadow:0 0 0 4px #184b31,10px 10px 0 rgba(0,0,0,.35);background:linear-gradient(180deg,#082c20,#041b14)}
 .thanks h3{margin:0;color:var(--green);font-size:clamp(29px,4vw,43px)}.thanks p{max-width:780px;margin:12px auto 0;color:var(--muted);font-size:17px;line-height:1.9}.note{margin-top:13px;color:var(--lime);font-weight:900}
-.grass{position:absolute;z-index:-1;width:150px;height:145px;background:#654321;box-shadow:inset 0 24px #4caf50,inset 0 35px #318d40,12px 12px 0 rgba(0,0,0,.28);image-rendering:pixelated}
-.grass:before{content:"";position:absolute;inset:42px 0 0;background:repeating-linear-gradient(135deg,transparent 0 14px,rgba(25,12,5,.22) 14px 27px)}.grass:after{content:"";position:absolute;top:-18px;left:14px;width:15px;height:25px;background:#4caf50;box-shadow:23px -7px #76cf57,45px 2px #2d8a3d,78px -12px #61ba4c,105px -2px #78d65f}
-.g1{left:-80px;top:340px;transform:rotate(-2deg)}.g2{right:-75px;top:590px;transform:rotate(2deg)}
-.torch{position:absolute;width:18px;height:98px;background:linear-gradient(90deg,#4f2d15 0 35%,#7f4b20 35% 70%,#3c210f 70%);box-shadow:4px 4px 0 rgba(0,0,0,.3);z-index:1}
-.torch:before{content:"";position:absolute;left:-10px;top:-35px;width:38px;height:42px;background:#ff9f1a;box-shadow:inset 8px 0 #ffd43b,inset -8px 0 #ef5b22,0 0 25px #ff9f1a;clip-path:polygon(50% 0,78% 35%,70% 100%,25% 100%,10% 45%)}.t1{left:3%;bottom:85px}.t2{right:3%;bottom:110px}
-.chest{position:absolute;right:-14px;bottom:4px;width:118px;height:92px;background:#9b5b18;border:7px solid #3c220d;box-shadow:8px 8px 0 rgba(0,0,0,.35);z-index:0}.chest:before{content:"";position:absolute;left:-7px;right:-7px;top:34px;border-top:8px solid #3c220d}.chest:after{content:"";position:absolute;width:24px;height:28px;left:40px;top:31px;background:#c9c9c9;border:5px solid #343434}
-.disclaimer{margin:30px auto 0;max-width:900px;text-align:center;color:#7fa591;font-size:13px;line-height:1.7}
-@media(max-width:880px){.payment-grid{grid-template-columns:1fr}.info-grid{grid-template-columns:1fr}.grass,.torch,.chest{display:none}.page{padding-top:36px}.hero h1{font-size:clamp(48px,14vw,82px)}}
+@media(max-width:880px){.payment-grid{grid-template-columns:1fr}.info-grid{grid-template-columns:1fr}.page{padding-top:36px}.hero h1{font-size:clamp(48px,14vw,82px)}}
 @media(max-width:520px){.page{width:min(100% - 18px,1180px)}.qr-area{padding:15px}.intro{padding:18px 14px}.pay-head{padding:22px 12px 18px}.badge{font-size:13px}}
 @media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
 .pay-card{
@@ -205,7 +198,7 @@ html[data-theme="light"] body{background-image:linear-gradient(rgba(78,77,64,.06
 .nav-button,.button,.copy-button,.menu-button,.theme-toggle{border-radius:2px!important;border:2px solid var(--mc-edge)!important;outline:1px solid var(--mc-line);box-shadow:var(--mc-hard-shadow-small)!important;text-shadow:1px 1px 0 rgba(0,0,0,.28);cursor:pointer}.nav-button{padding:10px 18px;background:linear-gradient(#68b450 0 50%,#4a8c43 50%);color:#fff!important;font-weight:900;transition:transform .25s ease,box-shadow .25s ease}.nav-button:hover{transform:translate(-2px,-2px);box-shadow:6px 6px 0 rgba(0,0,0,.52)!important}.nav-button:active{transform:translate(2px,2px);box-shadow:2px 2px 0 rgba(0,0,0,.5)!important}
 .theme-toggle{position:relative;width:52px!important;height:52px!important;padding:0!important;display:grid;place-items:center;overflow:hidden;background:#172b49!important;color:var(--mc-text)}html[data-theme="light"] .theme-toggle{background:#73b9e8!important}.theme-toggle:before{content:"";position:absolute;inset:4px;border:2px solid color-mix(in srgb,var(--mc-line) 70%,transparent)}.theme-toggle:hover{transform:translate(-1px,-1px) rotate(2deg);box-shadow:5px 5px 0 rgba(45,48,39,.38)!important}.theme-toggle:active{transform:translate(2px,2px);box-shadow:2px 2px 0 rgba(45,48,39,.35)!important}.mc-theme-celestial{position:absolute;inset:0;display:grid;place-items:center;transition:opacity .18s steps(2,end)!important}.mc-sky-svg{width:40px;height:40px;image-rendering:pixelated;filter:drop-shadow(2px 2px 0 rgba(0,0,0,.34))}.oa-theme-sun{opacity:1}.oa-theme-moon{opacity:0}html[data-theme="light"] .oa-theme-sun{opacity:0}html[data-theme="light"] .oa-theme-moon{opacity:1}.oa-edge-theme .oa-theme-glyph{position:absolute;inset:0;display:grid;place-items:center;font-size:22px;line-height:1;transition:opacity .18s steps(2,end)}.oa-edge-theme .oa-theme-sun{opacity:1}.oa-edge-theme .oa-theme-moon{opacity:0}html[data-theme="light"] .oa-edge-theme .oa-theme-sun{opacity:0}html[data-theme="light"] .oa-edge-theme .oa-theme-moon{opacity:1}
 .menu-button{display:none;width:48px;height:48px;padding:0;background:var(--mc-panel-2);color:var(--mc-text);font-size:22px}
-.page{width:min(1180px,calc(100% - 28px));padding-top:132px}.pixel-sky{opacity:.65}.grass,.torch,.chest{display:none}
+.page{width:min(1180px,calc(100% - 28px));padding-top:112px}.pixel-sky{opacity:.65}
 .hero h1,.hero h1 span,.section-title,.section-subtitle,.intro,.badge,.info-card,.thanks,.disclaimer{color:var(--mc-text);text-shadow:2px 2px 0 rgba(0,0,0,.3)}.hero h1 span,.section-title,.info-card h3,.thanks h3{color:var(--mc-highlight)}
 .hero h1{text-shadow:0 5px 0 rgba(0,0,0,.42)}.hero h1 span{ text-shadow:0 5px 0 rgba(0,0,0,.42)}
 .badge,.intro,.info-card,.thanks{border:2px solid var(--mc-edge);outline:1px solid var(--mc-line);border-radius:2px;background:var(--mc-panel);box-shadow:var(--mc-hard-shadow-small)}.intro{background:var(--mc-panel-2);box-shadow:6px 6px 0 rgba(0,0,0,.32)}.section-subtitle,.intro,.info-card p,.thanks p,.disclaimer{color:var(--mc-muted);text-shadow:1px 1px 0 rgba(0,0,0,.24)}
@@ -333,10 +326,10 @@ body.page-sponsor .payment-grid .qr-frame img {
 body.page-sponsor .payment-grid .pay-footer { display: none !important; }
 body.page-sponsor .payment-help {
   max-width: 900px;
-  margin: -12px auto 24px;
+  margin: 0 auto 20px;
   color: var(--mc-muted);
   text-align: center;
-  line-height: 1.8;
+  line-height: 1.75;
 }
 body.page-sponsor .qr-actions {
   display: flex;
@@ -447,16 +440,14 @@ body.page-sponsor .qr-actions a:focus-visible {
 <main class="page" id="main-content" tabindex="-1">
     <p class="container site-note site-script-note">部分交互暂不可用，请使用页脚导航；联系方式可手动选取，收款码可通过原图链接查看。</p>
 <div class="pixel-sky"><i class="star s1"></i><i class="star s2"></i><i class="star s3"></i><i class="star s4"></i></div>
-<div class="grass g1"></div><div class="grass g2"></div><div class="torch t1"></div><div class="torch t2"></div><div class="chest"></div>
 <section class="hero">
 <img class="oa-scene-title-image" src="最新服务器title.png" alt="Once Again · Without A Sound 服务器标题" width="1024" height="258" decoding="async" fetchpriority="high">
-<h1 class="oa-scene-title-caption">支持服务器 · 助力更好体验</h1>
-<div class="hero-badges"><span class="badge"><span class="badge-item" data-fallback="山羊角"><img class="mc-official-item" data-mc-item="goat_horn" src="mc-icons/goat_horn.png" alt="" aria-hidden="true" width="16" height="16" decoding="async" loading="lazy"></span>服务器筹备</span><span class="badge"><span class="badge-item" data-fallback="绿宝石"><img class="mc-official-item" data-mc-item="emerald" src="mc-icons/emerald.png" alt="" aria-hidden="true" width="16" height="16" decoding="async" loading="lazy"></span>自愿赞助</span><span class="badge"><span class="badge-item" data-fallback="紫水晶"><img class="mc-official-item" data-mc-item="amethyst_shard" src="mc-icons/amethyst_shard.png" alt="" aria-hidden="true" width="16" height="16" decoding="async" loading="lazy"></span>感谢支持</span></div>
-<div class="intro">你的支持将用于服务器筹备、日常维护与内容优化。<br>选择下方任意方式，直接扫描对应收款码即可。</div>
+<h1 class="oa-scene-title-caption">自愿赞助 · 助力筹备</h1>
+<div class="hero-badges"><span class="badge"><span class="badge-item" data-fallback="山羊角"><img class="mc-official-item" data-mc-item="goat_horn" src="mc-icons/goat_horn.png" alt="" aria-hidden="true" width="16" height="16" decoding="async" loading="lazy"></span>服务器筹备</span><span class="badge"><span class="badge-item" data-fallback="绿宝石"><img class="mc-official-item" data-mc-item="emerald" src="mc-icons/emerald.png" alt="" aria-hidden="true" width="16" height="16" decoding="async" loading="lazy"></span>社区自愿</span><span class="badge"><span class="badge-item" data-fallback="紫水晶"><img class="mc-official-item" data-mc-item="amethyst_shard" src="mc-icons/amethyst_shard.png" alt="" aria-hidden="true" width="16" height="16" decoding="async" loading="lazy"></span>理性支持</span></div>
+<div class="intro">支持纯属自愿，请量力而行；所有心意均用于服务器筹备与运行维护。</div>
 </section>
-<h2 class="section-title">＋ 赞助方式 ＋</h2>
-<p class="section-subtitle">简单直接，不跳转页面，不填写复杂表单</p>
-<p class="payment-help">请用对应支付应用扫描收款码。手机上可放大查看，或打开原图后保存，再按支付应用支持的方式识别。付款前，请核对支付应用显示的收款信息与金额。</p>
+<h2 class="section-title">扫码赞助</h2>
+<p class="payment-help">使用支付宝或微信扫码即可，支持放大查看或打开原图；付款前请核对收款信息。</p>
 <section class="payment-grid">
   <article class="pay-card alipay">
     <div class="pay-head"><h2>推荐使用支付宝</h2><span class="pay-badge">支持信用卡｜花呗付款</span></div>
@@ -491,9 +482,8 @@ body.page-sponsor .qr-actions a:focus-visible {
     <div class="pay-footer"><span class="brand-icon wx-icon">✓</span><span>微信支付</span></div>
   </article>
 </section>
-<section class="info-grid"><article class="info-card"><div class="info-icon mc-item-icon" data-fallback="铜粒"><img class="mc-official-item" data-mc-item="copper_nugget" src="mc-icons/copper_nugget.png" alt="铜粒" decoding="async" referrerpolicy="no-referrer" width="16" height="16" loading="lazy"></div><h3>服务器维护</h3><p>用于基础服务、运行环境和日常维护。</p></article><article class="info-card"><div class="info-icon mc-item-icon" data-fallback="镶铆纹饰"><img class="mc-official-item" data-mc-item="bolt_armor_trim_smithing_template" src="mc-icons/bolt_armor_trim_smithing_template.png" alt="镶铆盔甲纹饰锻造模板" decoding="async" referrerpolicy="no-referrer" width="16" height="16" loading="lazy"></div><h3>玩法优化</h3><p>持续完善道具、活动与游戏体验。</p></article><article class="info-card"><div class="info-icon mc-item-icon" data-fallback="熔岩鸡唱片"><img class="mc-official-item" data-mc-item="music_disc_lava_chicken" src="mc-icons/music_disc_lava_chicken.png" alt="熔岩鸡音乐唱片" decoding="async" referrerpolicy="no-referrer" width="16" height="16" loading="lazy"></div><h3>内容筹备</h3><p>为服务器开放及后续内容提供支持。</p></article></section>
-<section class="thanks"><h3>感谢你的支持！</h3><p>每一份支持都会成为服务器继续筹备和优化的动力。赞助完全自愿，请根据自身情况理性支持。</p><div class="note">感谢有你，冒险更精彩！</div></section>
-<p class="disclaimer">本页面为玩家社区服务器赞助页面，并非 Minecraft 官方页面，与 Mojang Studios 或 Microsoft 无隶属、授权或合作关系。</p>
+<section class="info-grid"><article class="info-card"><div class="info-icon mc-item-icon" data-fallback="铜粒"><img class="mc-official-item" data-mc-item="copper_nugget" src="mc-icons/copper_nugget.png" alt="铜粒" decoding="async" referrerpolicy="no-referrer" width="16" height="16" loading="lazy"></div><h3>服务器维护</h3><p>覆盖基础主机、网络带宽与日常运维开支。</p></article><article class="info-card"><div class="info-icon mc-item-icon" data-fallback="镶铆纹饰"><img class="mc-official-item" data-mc-item="bolt_armor_trim_smithing_template" src="mc-icons/bolt_armor_trim_smithing_template.png" alt="镶铆盔甲纹饰锻造模板" decoding="async" referrerpolicy="no-referrer" width="16" height="16" loading="lazy"></div><h3>玩法优化</h3><p>持续打磨系统机制、道具体验与活动内容。</p></article><article class="info-card"><div class="info-icon mc-item-icon" data-fallback="熔岩鸡唱片"><img class="mc-official-item" data-mc-item="music_disc_lava_chicken" src="mc-icons/music_disc_lava_chicken.png" alt="熔岩鸡音乐唱片" decoding="async" referrerpolicy="no-referrer" width="16" height="16" loading="lazy"></div><h3>内容筹备</h3><p>支持开服筹备与后续新版本内容制作。</p></article></section>
+<section class="thanks"><h3>感谢同行，静候启程</h3><p>每一份心意都会转化为更稳定的服务器与更耐玩的细节。社区纯属自愿支持，不附带游戏特权或回报承诺。</p></section>
 </main>
   <footer class="site-footer">
     <div class="container site-footer-inner">
